@@ -6,7 +6,8 @@
     "start": "webpack-dev-server --progress --open",
     "build": "webpack -p --progress",
     "build:dev": "webpack --progress",
-    "view": "serve --open --clipless www"
+    "view": "serve --open --clipless www",
+    "publish": "send-to-git -s 'www/**/*.*' -d ./test-wip-widgets -r git@github.com:otrl/otrl.github.io.git --commit-message 'Update widgets example'"
   },
   "author": "OTRL frontend <frontend@otrl.io>",
   "license": "UNLICENSED",
@@ -23,6 +24,7 @@
     "less": "2.7.3",
     "less-loader": "4.0.5",
     "rimraf": "2.6.2",
+    "send-to-git-cli": "1.0.0",
     "serve": "^6.3.1",
     "webpack": "3.8.1",
     "webpack-dev-server": "2.9.3"
@@ -30,6 +32,7 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "classnames": "2.2.5",
+    "otrl-search-widgets": "*",
     "prop-types": "15.6.0",
     "react": "15.6.1",
     "react-bootstrap": "0.31.3",

@@ -7,6 +7,8 @@ import "./main.less"; // customises otrl-search-widgets styles
 
 import Header from "./components/Header";
 
+// List of brands & configuration, so we can show a brand-selector dropdown
+// (Most sites aren't going to need this!)
 const DefaultTrainOperator = "thameslink";
 const TrainOperators = [
     "gatwick",
@@ -20,14 +22,17 @@ const TrainOperatorTabs = {
     gatwick: ["search"]
 };
 
+// Important: Configure the widgets - should be done _before_ rending a JourneyPlanner
 OtrlWidgets.configure(DefaultTrainOperator, "stage");
 
+// This is our main app
 class Main extends React.Component {
     state = {
         brand: DefaultTrainOperator,
         reloading: false
     };
 
+    // Logic to handle the brand-selector dropdown
     handleBrandChange = brand => {
         // The widgets need to be configured _before_ rendering.
         // So here we remove the widget temporarily to force it to re-mount
