@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Widgets demo - &lt;script&gt; tag</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link href='//fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="styles.css" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MRZFR42');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+      <div class="container">
+          <nav class="navbar navbar-default">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="/">ACME Train Company</a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li><a href="./index.html">Webpack &amp; React</a></li>
+                  <li class="active"><a href="#">Vanilla JS<span class="sr-only">(current)</span></a></li>
+              </ul>
+          </nav>
+          <div class="row">
+              <div class="col col-xs-12">
+                  <div class="alert alert-info">
+                      This is an example using vanilla JS to render the widgets into a DOM element.
+                      See [link]
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col col-md-6">
+                  <div class="jumbotron">
+                      <h1>Hello, world!</h1>
+                      <p>...</p>
+                      <p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="dataLayer.push({event:'HOST:button-click'})">Learn more</a></p>
+                  </div>
+              </div>
+              <div class="col col-md-6">
+                  <!-- Add widget here -->
+                  <div id="widget"></div>
+              </div>
+          </div>
+      </div>
+      <script src="./node_modules/widgets.js"></script>
+
+    <script>
+        const container = document.getElementById('widget');
+        OtrlWidgets.configure('southern', 'stage');
+        OtrlWidgets.mount(container, OtrlWidgets.JourneyPlanner, {
+            newWindow: true
+        });
+    </script>
+  </body>
+</html>
