@@ -10,7 +10,7 @@ Installs dependencies and starts up a development server running the demo app:
 
 This demo shows 2 examples of how you can embed otrl-search-widgets in your site.
 
-Before explaining the differences, you should note that they both share in common one thing: generation of CSS via webpack. That is not because this is the only way - you can use the less compiler directly, or with gulp or any number of other build tools. To see how we are building the CSS in this app, see [the webpack config](webpack.config.babel.js) and our [main.less](src/main.less)
+Before explaining the differences, you should note that they both share in common one thing: generation of CSS via webpack. To see how we are building the CSS in this app, see [the webpack config](webpack.config.babel.js) and our [main.less](src/main.less)
 
 # Vanilla JS
 

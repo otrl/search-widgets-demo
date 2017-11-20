@@ -45,9 +45,12 @@
 
     <script>
         const container = document.getElementById('widget');
-        OtrlWidgets.configure('southern', 'stage');
+        OtrlWidgets.configure('southern');
         OtrlWidgets.mount(container, OtrlWidgets.JourneyPlanner, {
-            newWindow: true
+            onSearch: function (searchType, resultsUrl) {
+                console.log(searchType +': '+ resultsUrl);
+                window.open(resultsUrl);
+            }
         });
     </script>
   </body>

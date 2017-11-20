@@ -23,7 +23,7 @@ const TrainOperatorTabs = {
 };
 
 // Important: Configure the widgets - should be done _before_ rending a JourneyPlanner
-OtrlWidgets.configure(DefaultTrainOperator, "stage");
+OtrlWidgets.configure(DefaultTrainOperator);
 
 // This is our main app
 class Main extends React.Component {
@@ -88,7 +88,10 @@ class Main extends React.Component {
                                 {!reloading && (
                                     <OtrlWidgets.JourneyPlanner
                                         tabs={ TrainOperatorTabs[brand] }
-                                        newWindow
+                                        onSearch={ (searchType, resultsUrl) => {
+                                            console.log(`${searchType}: ${resultsUrl}`);
+                                            window.open(resultsUrl);
+                                        }}
                                     />
                                 )}
                             </Col>
