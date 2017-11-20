@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { Grid, Row, Col, Alert, Jumbotron, Button } from "react-bootstrap";
-import * as OtrlWidgets from "otrl-search-widgets";
+import * as OtrlWidgets from "otrl-search-widgets/dist/widgets-no-react";
 
 import "./main.less"; // customises otrl-search-widgets styles
 

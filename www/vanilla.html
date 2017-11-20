@@ -46,7 +46,7 @@
     <script>
         const container = document.getElementById('widget');
         OtrlWidgets.configure('southern');
-        OtrlWidgets.mount(container, OtrlWidgets.JourneyPlanner, {
+        OtrlWidgets.render(container, OtrlWidgets.JourneyPlanner, {
             onSearch: function (searchType, resultsUrl) {
                 console.log(searchType +': '+ resultsUrl);
                 window.open(resultsUrl);
