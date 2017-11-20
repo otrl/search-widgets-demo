@@ -35,6 +35,14 @@ export default class Header extends React.Component {
                 <Nav>
                     <NavItem href="./vanilla.html">Vanilla JS</NavItem>
                 </Nav>
+                <Nav>
+                    <NavItem
+                        href="https://github.com/otrl/search-widgets-demo"
+                        target="_blank"
+                    >
+                        View in GitHub
+                    </NavItem>
+                </Nav>
                 <Nav className="navbar-form" pullRight>
                     <select
                         onChange={ this.handleBrandChange }

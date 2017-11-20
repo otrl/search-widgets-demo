@@ -62,7 +62,7 @@ class Main extends React.Component {
                                 <Alert bsStyle="info">
                                     This is an example web app built with
                                     webpack & using the OTRL search widgets as
-                                    React.js components. See [link]
+                                    React.js components.
                                 </Alert>
                             </Col>
                         </Row>
