@@ -13,7 +13,6 @@ const DefaultTrainOperator = "thameslink";
 const TrainOperators = [
     "gatwick",
     "greatnorthern",
-    "londonmidland",
     "southeastern",
     "southern",
     "thameslink"

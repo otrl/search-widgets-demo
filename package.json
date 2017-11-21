@@ -6,6 +6,7 @@
     "start": "webpack-dev-server --progress --open",
     "build": "webpack -p --progress",
     "build:dev": "webpack --progress",
+    "build:css": "lessc --npm-import=\"prefix=~\" --modify-var=\"brand='southeastern'\" --modify-var=\"brandOverrides=''\" --modify-var=\"fontUrl='fonts/'\" src/main.less www/styles.css",
     "view": "serve --open --clipless www",
     "publish": "send-to-git -s 'www/**/*.*' -d ./search-widgets-demo -r git@github.com:otrl/otrl.github.io.git --commit-message 'Update widgets example'"
   },
@@ -23,6 +24,7 @@
     "extract-text-webpack-plugin": "^3.0.1",
     "less": "2.7.3",
     "less-loader": "4.0.5",
+    "less-plugin-npm-import": "2.1.0",
     "rimraf": "2.6.2",
     "send-to-git-cli": "1.0.0",
     "serve": "^6.3.1",
