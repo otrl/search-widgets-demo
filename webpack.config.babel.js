@@ -5,7 +5,10 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 const resolvePath = (...pathParts) => path.resolve(__dirname, ...pathParts);
 
 module.exports = {
-    entry: resolvePath('src/main.js'),
+    entry: [
+        'babel-polyfill',
+        resolvePath('src/main.js')
+    ],
     output: {
         filename: 'app.js',
         path: resolvePath('www')

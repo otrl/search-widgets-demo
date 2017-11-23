@@ -26,6 +26,8 @@ Starting at [src/main.js](src/main.js) you will see a [React](https://reactjs.or
 
 Here we simply configure the widgets (as we did in the vanilla example), and then include the `<JourneyPlanner>` component in our JSX.
 
+Also, please note in [the webpack config](webpack.config.babel.js) we load [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) before our entry point so that modern JavaScript features are available on older browsers such as Internet Explorer.
+
 ## Other npm scripts
 
 ### npm run build
