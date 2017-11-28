@@ -10,8 +10,6 @@ Installs dependencies and starts up a development server running the demo app:
 
 This demo shows 2 examples of how you can embed otrl-search-widgets in your site.
 
-Before explaining the differences, you should note that they both share in common one thing: generation of CSS via webpack. To see how we are building the CSS in this app, see [the webpack config](webpack.config.babel.js) and our [main.less](src/main.less)
-
 # Vanilla JS
 
 See [www/vanilla.html](www/vanilla.html)
@@ -19,6 +17,8 @@ See [www/vanilla.html](www/vanilla.html)
 In this example, we load the `widgets.js` from `otrl-search-widgets` via a `<script>` tag and imperatively render a search widget into our target DOM element.
 
 _note_: The `widgets.js` is copied from `node_modules/` to `www/` in [the webpack config](webpack.config.babel.js)
+
+The CSS is built by webpack, but running `npm run build:css` will compile the css with [less](https://www.npmjs.com/package/less).
 
 # Advanced
 
@@ -37,6 +37,10 @@ Builds the app to `./www/`
 ### npm run build:dev
 
 Builds the app to `./www/` in development mode (no minification)
+
+### npm run build:css
+
+Standalone script to build the css using [less](https://www.npmjs.com/package/less) & [less-plugin-npm-import](https://www.npmjs.com/package/less-plugin-npm-import)
 
 ### npm run view
 
