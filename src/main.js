@@ -21,8 +21,13 @@ const TrainOperatorTabs = {
     gatwick: ["search"]
 };
 
+const getCustomConfig = brand => ({
+    apiHost: `api-${brand}.sf-widgets.otrldev.uk`,
+    bookingEngineHost: `${brand}.sf-widgets.otrldev.uk`
+});
+
 // Important: Configure the widgets - should be done _before_ rending a JourneyPlanner
-OtrlWidgets.configure(DefaultTrainOperator);
+OtrlWidgets.configure(DefaultTrainOperator, 'test', getCustomConfig(DefaultTrainOperator));
 
 // This is our main app
 class Main extends React.Component {
@@ -38,7 +43,7 @@ class Main extends React.Component {
         clearTimeout(this.timeout);
         this.setState({ brand, reloading: true });
         this.timeout = setTimeout(() => {
-            OtrlWidgets.configure(brand);
+            OtrlWidgets.configure(brand, 'test', getCustomConfig(brand));
             this.setState({ reloading: false });
         }, 50);
     };
