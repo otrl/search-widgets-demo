@@ -66,6 +66,29 @@ class Main extends React.Component {
                             </Col>
                         </Row>
                         <Row>
+                            <Col xs={ 12 }>
+                                <h3 className="text-uppercase">Horizontal layout (default)</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={ 12 }>
+                                {!reloading && (
+                                    <OtrlWidgets.JourneyPlanner
+                                        tabs={ TrainOperatorTabs[brand] }
+                                        onSearch={ (searchType, resultsUrl) => {
+                                            console.log(`${searchType}: ${resultsUrl}`);
+                                            window.open(resultsUrl);
+                                        }}
+                                    />
+                                )}
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={ 12 }>
+                                <h3 className="text-uppercase">Vertical layout</h3>
+                            </Col>
+                        </Row>
+                        <Row>
                             <Col md={ 7 } lg={ 8 }>
                                 <Jumbotron>
                                     <h1>Weekend getaway to Blackpool</h1>
@@ -87,6 +110,7 @@ class Main extends React.Component {
                                 {!reloading && (
                                     <OtrlWidgets.JourneyPlanner
                                         tabs={ TrainOperatorTabs[brand] }
+                                        layout="vertical"
                                         onSearch={ (searchType, resultsUrl) => {
                                             console.log(`${searchType}: ${resultsUrl}`);
                                             window.open(resultsUrl);
