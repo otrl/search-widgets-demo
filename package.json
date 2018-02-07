@@ -11,7 +11,7 @@
     "publish": "send-to-git -s 'www/**/*.*' -d ./search-widgets-demo -r git@github.com:otrl/otrl.github.io.git --commit-message 'Update widgets example'"
   },
   "author": "OTRL frontend <frontend@otrl.io>",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
