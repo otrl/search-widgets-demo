@@ -37,9 +37,9 @@
     "classnames": "2.2.5",
     "otrl-search-widgets": "*",
     "prop-types": "15.6.0",
-    "react": "15.6.1",
+    "react": "16.2.0",
     "react-bootstrap": "0.31.3",
-    "react-dom": "15.6.1",
-    "react-widgets": "^4.0.2"
+    "react-dom": "16.2.0",
+    "react-widgets": "4.1.1"
   }
 }
